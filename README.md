@@ -19,18 +19,17 @@ Este proyecto es una **calculadora simple** desarrollada en Python utilizando la
 1. **Clona este repositorio** en tu máquina local:
 
    ```bash
-   git clone https://github.com/tu-usuario/nombre-del-repositorio.git
+   git clone https://github.com/FeibertGuzman/Python-EST_DAT.git
 
 2. Navega al directorio del proyecto:
 
-    ```bash
-    cd nombre-del-repositorio
+   cd Python-EST_DAT
 
 3. Ejecuta el script:
 
 Asegúrate de tener **Python** instalado (preferiblemente la versión 3.8 o superior).
 
-      python nombre_del_script.py
+   
 
 ## Uso
 - Al ejecutar el script, se abrirá una ventana con la calculadora simple.
@@ -54,10 +53,22 @@ Asegúrate de tener **Python** instalado (preferiblemente la versión 3.8 o supe
 Las contribuciones son bienvenidas. Si deseas mejorar esta aplicación, por favor sigue los siguientes pasos:
 
 1. Haz un fork de este repositorio.
-2. Crea una rama para tu nueva función (git checkout -b feature/nueva-funcion).
-4. Realiza tus cambios y haz commit (git commit -m 'Añadir nueva función').
-5. Sube tu rama (git push origin feature/nueva-funcion).
-6. Crea un Pull Request.
+   
+   `git checkout -b feature/nueva-funcion`
+   
+2. Crea una rama para tu nueva función
+  
+   `git checkout -b feature/nueva-funcion`
+   
+3. Realiza tus cambios y haz commit
+   
+   `git commit -m 'Añadir nueva función'`
+  
+4. Sube tu rama
+
+   `git push origin feature/nueva-funcion`
+   
+5. Crea un Pull Request.
 
 ## **Licencia**
 Este proyecto está licenciado bajo la MIT License.
