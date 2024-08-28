@@ -45,6 +45,8 @@ Asegúrate de tener **Python** instalado (preferiblemente la versión 3.8 o supe
 
 ## Captura de Pantalla
 
+![Python](https://github.com/FeibertGuzman/Python-EST_DAT/blob/main/Captura_pantalla%20.png)
+
 ### Requisitos
 - **Python 3.8+**
 - **Tkinter** (generalmente viene preinstalado con Python en la mayoría de las distribuciones)
