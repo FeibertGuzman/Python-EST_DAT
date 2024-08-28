@@ -77,7 +77,11 @@ Este proyecto está licenciado bajo la MIT License.
 Feibert Alirio Guzmán Pérez
 fguzman@unilasallista.edu.co
 
-
+## Recursos Adicionales
+Documentación Oficial de **GitHub sobre Pull Requests**
+https://docs.github.com/es/get-started/start-your-journey/hello-world 
+Guía para la Creación de **Pull Requests**
+https://docs.github.com/en/pull-requests
 
 
 
