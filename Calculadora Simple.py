@@ -1,4 +1,4 @@
-# Importar las clases necesarias de tkinter
+# Importar las Librerias necesarias de tkinter
 from tkinter import Tk, Label, Button, Entry
 
 """
