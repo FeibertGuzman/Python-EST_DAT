@@ -23,6 +23,7 @@ def crear_ventana():
     vent.geometry("500x300")  # Dimensiones de la ventana
     vent.configure(bg=bg_color)  # Color de fondo de la ventana
 
+    
     # Definir la función que se ejecutará al presionar el botón "Sumar"
     def fnSuma():
         n1 = txt1.get()
