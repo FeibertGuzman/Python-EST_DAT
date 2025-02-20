@@ -1,4 +1,4 @@
-# Importar las Librerías necesarias de tkinter
+# Importar las Librerías necesarias de tkinter ok
 from tkinter import Tk, Label, Button, Entry, Menu
 
 """
@@ -11,12 +11,15 @@ Descripción de los widgets utilizados en Tkinter:
 """
 
 # Definir las funciones para las operaciones
+
+
 def fnSuma():
     n1 = txt1.get()
     n2 = txt2.get()
     r = float(n1) + float(n2)
     txt3.delete(0, 'end')  # Limpiar el campo de resultado
     txt3.insert(0, r)  # Insertar el resultado en el campo de texto
+
 
 def fnResta():
     n1 = txt1.get()
@@ -26,24 +29,36 @@ def fnResta():
     txt3.insert(0, r)  # Insertar el resultado en el campo de texto
 
 # Definir la función que se ejecutará al presionar el botón "Salir"
+
+
 def fnSalir():
     vent.destroy()  # Cierra la ventana principal
 
+
 def crear_menu(vent):
     # Crear barra de menú
-    barra_menu = Menu(vent)  # Crea una barra de menú principal en la ventana 'vent'
-    vent.config(menu=barra_menu)  # Configura la ventana 'vent' para que use esta barra de menú
-    
+    # Crea una barra de menú principal en la ventana 'vent'
+    barra_menu = Menu(vent)
+    # Configura la ventana 'vent' para que use esta barra de menú
+    vent.config(menu=barra_menu)
+
     # Menú "Inicio"
-    menu_inicio = Menu(barra_menu, tearoff=0)  # Crea un submenú dentro de la barra de menú, llamado "Inicio"
-    barra_menu.add_cascade(label="Inicio", menu=menu_inicio)  # Añade el submenú "Inicio" a la barra de menú
-    menu_inicio.add_command(label="Salir", command=vent.destroy)  # Añade una opción al submenú "Inicio" para cerrar la ventana
-    
+    # Crea un submenú dentro de la barra de menú, llamado "Inicio"
+    menu_inicio = Menu(barra_menu, tearoff=0)
+    # Añade el submenú "Inicio" a la barra de menú
+    barra_menu.add_cascade(label="Inicio", menu=menu_inicio)
+    # Añade una opción al submenú "Inicio" para cerrar la ventana
+    menu_inicio.add_command(label="Salir", command=vent.destroy)
+
     # Menú "Operación"
-    menu_operacion = Menu(barra_menu, tearoff=0)  # Crea otro submenú dentro de la barra de menú, llamado "Operación"
-    barra_menu.add_cascade(label="Operación", menu=menu_operacion)  # Añade el submenú "Operación" a la barra de menú
-    menu_operacion.add_command(label="Sumar", command=fnSuma)  # Añade una opción al submenú "Operación" para realizar la suma
-    menu_operacion.add_command(label="Restar", command=fnResta)  # Añade una opción al submenú "Operación" para realizar la resta
+    # Crea otro submenú dentro de la barra de menú, llamado "Operación"
+    menu_operacion = Menu(barra_menu, tearoff=0)
+    # Añade el submenú "Operación" a la barra de menú
+    barra_menu.add_cascade(label="Operación", menu=menu_operacion)
+    # Añade una opción al submenú "Operación" para realizar la suma
+    menu_operacion.add_command(label="Sumar", command=fnSuma)
+    # Añade una opción al submenú "Operación" para realizar la resta
+    menu_operacion.add_command(label="Restar", command=fnResta)
 
 
 def crear_ventana():
@@ -62,39 +77,58 @@ def crear_ventana():
     crear_menu(vent)
 
     # Crear los elementos de la interfaz de usuario
-    global txt1, txt2, txt3  # Declarar las entradas como globales para que las funciones puedan acceder a ellas
+    # Declarar las entradas como globales para que las funciones puedan acceder a ellas
+    global txt1, txt2, txt3
 
     # Etiqueta y campo de texto para el primer número
-    lbl1 = Label(vent, text="Primer número", fg=fg_color, bg=bg_color, font=font)
-    lbl1.place(relx=0.5, rely=0.1, anchor='center', relwidth=0.6, relheight=0.1)
-    txt1 = Entry(vent, bg="#FFF")  # Campo de entrada para el primer número (fondo blanco)
-    txt1.place(relx=0.5, rely=0.2, anchor='center', relwidth=0.6, relheight=0.1)
+    lbl1 = Label(vent, text="Primer número",
+                 fg=fg_color, bg=bg_color, font=font)
+    lbl1.place(relx=0.5, rely=0.1, anchor='center',
+               relwidth=0.6, relheight=0.1)
+    # Campo de entrada para el primer número (fondo blanco)
+    txt1 = Entry(vent, bg="#FFF")
+    txt1.place(relx=0.5, rely=0.2, anchor='center',
+               relwidth=0.6, relheight=0.1)
 
     # Etiqueta y campo de texto para el segundo número
-    lbl2 = Label(vent, text="Segundo número", fg=fg_color, bg=bg_color, font=font)
-    lbl2.place(relx=0.5, rely=0.35, anchor='center', relwidth=0.6, relheight=0.1)
-    txt2 = Entry(vent, bg="#FFF")  # Campo de entrada para el segundo número (fondo blanco)
-    txt2.place(relx=0.5, rely=0.45, anchor='center', relwidth=0.6, relheight=0.1)
+    lbl2 = Label(vent, text="Segundo número",
+                 fg=fg_color, bg=bg_color, font=font)
+    lbl2.place(relx=0.5, rely=0.35, anchor='center',
+               relwidth=0.6, relheight=0.1)
+    # Campo de entrada para el segundo número (fondo blanco)
+    txt2 = Entry(vent, bg="#FFF")
+    txt2.place(relx=0.5, rely=0.45, anchor='center',
+               relwidth=0.6, relheight=0.1)
 
     # Etiqueta y campo de texto para el resultado
     lbl3 = Label(vent, text="Resultado", fg=fg_color, bg=bg_color, font=font)
-    lbl3.place(relx=0.5, rely=0.6, anchor='center', relwidth=0.6, relheight=0.1)
-    txt3 = Entry(vent, bg="#FFF")  # Campo de entrada para el resultado (fondo blanco)
-    txt3.place(relx=0.5, rely=0.7, anchor='center', relwidth=0.6, relheight=0.1)
+    lbl3.place(relx=0.5, rely=0.6, anchor='center',
+               relwidth=0.6, relheight=0.1)
+    # Campo de entrada para el resultado (fondo blanco)
+    txt3 = Entry(vent, bg="#FFF")
+    txt3.place(relx=0.5, rely=0.7, anchor='center',
+               relwidth=0.6, relheight=0.1)
 
     # Botón "Sumar"
-    btn1 = Button(vent, text="Sumar", command=fnSuma, bg=bg_color, fg=fg_color, font=font)
-    btn1.place(relx=0.3, rely=0.9, anchor='center', relwidth=0.2, relheight=0.1)
+    btn1 = Button(vent, text="Sumar", command=fnSuma,
+                  bg=bg_color, fg=fg_color, font=font)
+    btn1.place(relx=0.3, rely=0.9, anchor='center',
+               relwidth=0.2, relheight=0.1)
 
     # Botón "Restar"
-    btn2 = Button(vent, text="Restar", command=fnResta, bg=bg_color, fg=fg_color, font=font)
-    btn2.place(relx=0.7, rely=0.9, anchor='center', relwidth=0.2, relheight=0.1)
+    btn2 = Button(vent, text="Restar", command=fnResta,
+                  bg=bg_color, fg=fg_color, font=font)
+    btn2.place(relx=0.7, rely=0.9, anchor='center',
+               relwidth=0.2, relheight=0.1)
 
     # Botón "Salir"
-    btnSalir = Button(vent, text="Salir", command=fnSalir, bg="#E74C3C", fg="#FFF", font=font)
-    btnSalir.place(relx=0.5, rely=0.9, anchor='center', relwidth=0.2, relheight=0.1)
+    btnSalir = Button(vent, text="Salir", command=fnSalir,
+                      bg="#E74C3C", fg="#FFF", font=font)
+    btnSalir.place(relx=0.5, rely=0.9, anchor='center',
+                   relwidth=0.2, relheight=0.1)
 
     return vent  # Devolver la ventana creada
+
 
 # Crear la ventana principal
 vent = crear_ventana()
